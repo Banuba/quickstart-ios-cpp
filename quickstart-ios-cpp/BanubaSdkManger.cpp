@@ -26,6 +26,7 @@ extern "C" struct BanubaSdkManager
             false /*manual_audio*/
         })}
     {
+        effectPlayer->surface_created(720, 1280);
     }
 };
 
@@ -58,11 +59,10 @@ extern "C" void BanubaSdkManager_loadEffect(
     const char* effectPath,
     bool synchronous)
 {
-    sdk->effectPlayer->load_effect(effectPath);
     if (synchronous) {
-        while (sdk->effectPlayer->get_effect_status() == effect_status::active) {
-            sdk->effectPlayer->draw();
-        }
+        sdk->effectPlayer->effect_manager()->load(effectPath);
+    } else {
+        sdk->effectPlayer->effect_manager()->load_async(effectPath);
     }
 }
 

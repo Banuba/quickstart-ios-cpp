@@ -79,11 +79,10 @@ static void imageFromRGBAFree(void* info, const void* data, size_t size)
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    sdkManager = BanubaSdkManager_create();
-
     [EAGLContext setCurrentContext:
                      [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3]];
 
+    sdkManager = BanubaSdkManager_create();
     BanubaSdkManager_loadEffect(sdkManager, "effects/PineappleGlasses", true);
 
     let img = [UIImage imageWithContentsOfFile:

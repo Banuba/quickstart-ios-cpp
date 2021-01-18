@@ -3,20 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		132F25C0245B03E90028CB2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 132F25BF245B03E90028CB2F /* AppDelegate.m */; };
 		132F25D1245B03EB0028CB2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 132F25D0245B03EB0028CB2F /* main.m */; };
 		132F25D9245B08C00028CB2F /* BanubaSdkManger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 132F25D8245B08C00028CB2F /* BanubaSdkManger.cpp */; };
-		132F25DC245B09B00028CB2F /* BanubaEffectPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132F25DB245B09B00028CB2F /* BanubaEffectPlayer.framework */; };
-		132F25DD245B09B00028CB2F /* BanubaEffectPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 132F25DB245B09B00028CB2F /* BanubaEffectPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		134AC781246042130056CE94 /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 134AC780246042130056CE94 /* effects */; };
 		134AC783246043C10056CE94 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134AC782246043C00056CE94 /* OpenGLES.framework */; };
 		134AC78624604CE60056CE94 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134AC78524604CE60056CE94 /* ViewController.m */; };
 		134AC78824604D210056CE94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 134AC78724604D210056CE94 /* Main.storyboard */; };
 		134AC78A24604F410056CE94 /* photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 134AC78924604F410056CE94 /* photo.jpg */; };
+		13522BF525B5C85C00617023 /* BanubaEffectPlayer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13522BF425B5C85C00617023 /* BanubaEffectPlayer.xcframework */; };
+		13522BF625B5C85C00617023 /* BanubaEffectPlayer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13522BF425B5C85C00617023 /* BanubaEffectPlayer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,7 +26,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				132F25DD245B09B00028CB2F /* BanubaEffectPlayer.framework in Embed Frameworks */,
+				13522BF625B5C85C00617023 /* BanubaEffectPlayer.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,7 +41,6 @@
 		132F25D0245B03EB0028CB2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		132F25D7245B05800028CB2F /* BanubaSdkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BanubaSdkManager.h; sourceTree = "<group>"; };
 		132F25D8245B08C00028CB2F /* BanubaSdkManger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BanubaSdkManger.cpp; sourceTree = "<group>"; };
-		132F25DB245B09B00028CB2F /* BanubaEffectPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BanubaEffectPlayer.framework; path = Frameworks/BanubaEffectPlayer.framework; sourceTree = "<group>"; };
 		132F25DF245B13EF0028CB2F /* BanubaClientToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BanubaClientToken.h; sourceTree = "<group>"; };
 		134AC780246042130056CE94 /* effects */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = effects; sourceTree = SOURCE_ROOT; };
 		134AC782246043C00056CE94 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -49,6 +48,7 @@
 		134AC78524604CE60056CE94 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		134AC78724604D210056CE94 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		134AC78924604F410056CE94 /* photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo.jpg; path = "quickstart-ios-cpp/photo.jpg"; sourceTree = SOURCE_ROOT; };
+		13522BF425B5C85C00617023 /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaEffectPlayer.xcframework; path = Frameworks/BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				132F25DC245B09B00028CB2F /* BanubaEffectPlayer.framework in Frameworks */,
+				13522BF525B5C85C00617023 /* BanubaEffectPlayer.xcframework in Frameworks */,
 				134AC783246043C10056CE94 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,8 +102,8 @@
 		132F25DA245B09B00028CB2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				13522BF425B5C85C00617023 /* BanubaEffectPlayer.xcframework */,
 				134AC782246043C00056CE94 /* OpenGLES.framework */,
-				132F25DB245B09B00028CB2F /* BanubaEffectPlayer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -319,10 +319,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/Frameworks/BanubaEffectPlayer.framework/Headers\"",
-					"\"$(SRCROOT)/Frameworks/BanubaEffectPlayer.framework/PrivateHeaders\"",
-				);
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks/BanubaEffectPlayer.xcframework/ios-arm64/BanubaEffectPlayer.framework/PrivateHeaders\"";
 				INFOPLIST_FILE = "quickstart-ios-cpp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -346,10 +343,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/Frameworks/BanubaEffectPlayer.framework/Headers\"",
-					"\"$(SRCROOT)/Frameworks/BanubaEffectPlayer.framework/PrivateHeaders\"",
-				);
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks/BanubaEffectPlayer.xcframework/ios-arm64/BanubaEffectPlayer.framework/PrivateHeaders\"";
 				INFOPLIST_FILE = "quickstart-ios-cpp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

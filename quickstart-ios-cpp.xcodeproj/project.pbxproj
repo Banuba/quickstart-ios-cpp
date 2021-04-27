@@ -11,7 +11,6 @@
 		132F25D1245B03EB0028CB2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 132F25D0245B03EB0028CB2F /* main.m */; };
 		132F25D9245B08C00028CB2F /* BanubaSdkManger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 132F25D8245B08C00028CB2F /* BanubaSdkManger.cpp */; };
 		134AC781246042130056CE94 /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 134AC780246042130056CE94 /* effects */; };
-		134AC783246043C10056CE94 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134AC782246043C00056CE94 /* OpenGLES.framework */; };
 		134AC78624604CE60056CE94 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134AC78524604CE60056CE94 /* ViewController.m */; };
 		134AC78824604D210056CE94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 134AC78724604D210056CE94 /* Main.storyboard */; };
 		134AC78A24604F410056CE94 /* photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 134AC78924604F410056CE94 /* photo.jpg */; };
@@ -57,7 +56,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				13522BF525B5C85C00617023 /* BanubaEffectPlayer.xcframework in Frameworks */,
-				134AC783246043C10056CE94 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +142,7 @@
 		132F25B3245B03E90028CB2F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = Banuba;
 				TargetAttributes = {
 					132F25BA245B03E90028CB2F = {

@@ -1,10 +1,12 @@
 #import "ViewController.h"
 #import "BanubaSdkManager.h"
+#import <Metal/Metal.h>
 
 @interface ViewController ()
 {
     BanubaSdkManager* sdkManager;
     __weak IBOutlet UIImageView* imageView;
+    CAMetalLayer* offscreenLayer;
 }
 @end
 
@@ -79,11 +81,11 @@ static void imageFromRGBAFree(void* info, const void* data, size_t size)
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [EAGLContext setCurrentContext:
-                     [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3]];
+    offscreenLayer = [CAMetalLayer new];
 
     sdkManager = BanubaSdkManager_create();
-    BanubaSdkManager_loadEffect(sdkManager, "effects/PineappleGlasses", true);
+    BanubaSdkManager_setMetalLayer(sdkManager, (__bridge void *)(offscreenLayer));
+    BanubaSdkManager_loadEffect(sdkManager, "effects/TrollGrandma", true);
 
     let img = [UIImage imageWithContentsOfFile:
                            [NSBundle.mainBundle pathForResource:@"photo"

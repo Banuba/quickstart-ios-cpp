@@ -10,6 +10,9 @@ void BanubaSdkManager_deinitialize(void);
 
 BanubaSdkManager* BanubaSdkManager_create(void);
 
+/** Accepts CAMetalLayer */
+void BanubaSdkManager_setMetalLayer(BanubaSdkManager* sdk, void* layer);
+
 void BanubaSdkManager_loadEffect(
     BanubaSdkManager* sdk,
     const char* effectPath,

@@ -54,6 +54,14 @@ extern "C" BanubaSdkManager* BanubaSdkManager_create()
     return sdk;
 }
 
+extern "C" void BanubaSdkManager_setMetalLayer(
+    BanubaSdkManager* sdk,
+    void* layer)
+{
+    sdk->effectPlayer->effect_manager()->set_render_surface(
+        reinterpret_cast<int64_t>(layer));
+}
+
 extern "C" void BanubaSdkManager_loadEffect(
     BanubaSdkManager* sdk,
     const char* effectPath,

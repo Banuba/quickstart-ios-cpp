@@ -94,6 +94,10 @@ static void imageFromRGBAFree(void* info, const void* data, size_t size)
     let width = img.size.width;
     let height = img.size.height;
 
+    // Perform 1 draw call on 1x1 image to prepare rendering
+    // pipline
+    BanubaSdkManager_processPhoto(sdkManager, (char[4]){}, 1, 1);
+    
     let processedRaw = BanubaSdkManager_processPhoto(
         sdkManager,
         [self getRGBAFromImage:img].bytes,

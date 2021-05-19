@@ -1,4 +1,4 @@
-Quick start examples for integrating [Banuba SDK on iOS](https://docs.banuba.com/docs/ios/ios_getting_started) in C++ apps.
+Quick start examples for integrating [Banuba SDK on iOS](https://docs.banuba.com/face-ar-sdk-v1/ios/ios_getting_started) in C++ apps.
 
 # Getting Started
 

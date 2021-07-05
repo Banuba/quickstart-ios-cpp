@@ -3,7 +3,7 @@ extern "C"
 #include "BanubaSdkManager.h"
 }
 
-#include <bnb/utils/interfaces/all.hpp>
+#include <bnb/recognizer/interfaces/all.hpp>
 #include <bnb/effect_player/interfaces/all.hpp>
 
 using std::shared_ptr;

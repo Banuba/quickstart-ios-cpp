@@ -29,7 +29,8 @@
 
 - (void)applicationWillTerminate:(UIApplication*)application
 {
-    BanubaSdkManager_deinitialize();
+    // It also possible to free SDK resources somewhere in app:
+    // BanubaSdkManager_deinitialize();
 }
 
 @end

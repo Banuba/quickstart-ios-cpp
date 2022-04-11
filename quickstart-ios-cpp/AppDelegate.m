@@ -1,7 +1,6 @@
 #import "AppDelegate.h"
 #import "BanubaSdkManager.h"
 #import "BanubaClientToken.h"
-#import <BanubaEffectPlayer/BanubaEffectPlayer.h>
 #import <OpenGLES/EAGL.h>
 
 @interface AppDelegate ()
@@ -13,14 +12,18 @@
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-    let bnbFramework = [NSBundle bundleForClass:BNBEffectPlayer.class];
+    let mainBundle = [NSBundle mainBundle].bundlePath;
     let bnbRes = [NSString stringWithFormat:@"%@/%@",
-                                            bnbFramework.bundlePath,
+                                            mainBundle,
                                             @"bnb-resources"];
+    let bnbEffects = [NSString stringWithFormat:@"%@/%@",
+                                             mainBundle,
+                                            @"/effects"];
+
     BanubaSdkManager_initialize(
         (const char*[]){
             bnbRes.UTF8String /* this is sdk resources */,
-            NSBundle.mainBundle.bundlePath.UTF8String /*this is for effects*/,
+            bnbEffects.UTF8String /*this is for effects*/,
             NULL},
         BNB_CLIENT_TOKEN);
 

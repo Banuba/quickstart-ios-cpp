@@ -85,7 +85,7 @@ static void imageFromRGBAFree(void* info, const void* data, size_t size)
 
     sdkManager = BanubaSdkManager_create();
     BanubaSdkManager_setMetalLayer(sdkManager, (__bridge void *)(offscreenLayer));
-    BanubaSdkManager_loadEffect(sdkManager, "effects/TrollGrandma", true);
+    BanubaSdkManager_loadEffect(sdkManager, "TrollGrandma", true);
 
     let img = [UIImage imageWithContentsOfFile:
                            [NSBundle.mainBundle pathForResource:@"photo"

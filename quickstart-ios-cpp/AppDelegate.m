@@ -12,12 +12,11 @@
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-    let mainBundle = [NSBundle mainBundle].bundlePath;
     let bnbRes = [NSString stringWithFormat:@"%@/%@",
-                                            mainBundle,
+                      NSBundle.mainBundle.bundlePath,
                                             @"bnb-resources"];
     let bnbEffects = [NSString stringWithFormat:@"%@/%@",
-                                             mainBundle,
+                      NSBundle.mainBundle.bundlePath,
                                             @"/effects"];
 
     BanubaSdkManager_initialize(

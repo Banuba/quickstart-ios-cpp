@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,23 +14,8 @@
 		134AC78624604CE60056CE94 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134AC78524604CE60056CE94 /* ViewController.m */; };
 		134AC78824604D210056CE94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 134AC78724604D210056CE94 /* Main.storyboard */; };
 		134AC78A24604F410056CE94 /* photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 134AC78924604F410056CE94 /* photo.jpg */; };
-		13522BF525B5C85C00617023 /* BanubaEffectPlayer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13522BF425B5C85C00617023 /* BanubaEffectPlayer.xcframework */; };
-		13522BF625B5C85C00617023 /* BanubaEffectPlayer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13522BF425B5C85C00617023 /* BanubaEffectPlayer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7E23397AE43A0F79A2249690 /* Pods_quickstart_ios_cpp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED18F543B4A45F23BD1140DA /* Pods_quickstart_ios_cpp.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		132F25DE245B09B00028CB2F /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				13522BF625B5C85C00617023 /* BanubaEffectPlayer.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		132F25BB245B03E90028CB2F /* quickstart-ios-cpp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "quickstart-ios-cpp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +33,9 @@
 		134AC78724604D210056CE94 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		134AC78924604F410056CE94 /* photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo.jpg; path = "quickstart-ios-cpp/photo.jpg"; sourceTree = SOURCE_ROOT; };
 		13522BF425B5C85C00617023 /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaEffectPlayer.xcframework; path = Frameworks/BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
+		4AC9D69613E186513F5CC614 /* Pods-quickstart-ios-cpp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quickstart-ios-cpp.debug.xcconfig"; path = "Target Support Files/Pods-quickstart-ios-cpp/Pods-quickstart-ios-cpp.debug.xcconfig"; sourceTree = "<group>"; };
+		ED18F543B4A45F23BD1140DA /* Pods_quickstart_ios_cpp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quickstart_ios_cpp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9BE358E02D715F1B0FDEB67 /* Pods-quickstart-ios-cpp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quickstart-ios-cpp.release.xcconfig"; path = "Target Support Files/Pods-quickstart-ios-cpp/Pods-quickstart-ios-cpp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +43,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13522BF525B5C85C00617023 /* BanubaEffectPlayer.xcframework in Frameworks */,
+				7E23397AE43A0F79A2249690 /* Pods_quickstart_ios_cpp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11A0B6A4017781367B85EE04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4AC9D69613E186513F5CC614 /* Pods-quickstart-ios-cpp.debug.xcconfig */,
+				F9BE358E02D715F1B0FDEB67 /* Pods-quickstart-ios-cpp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		132F25B2245B03E90028CB2F = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +66,7 @@
 				132F25BD245B03E90028CB2F /* quickstart-ios-cpp */,
 				132F25BC245B03E90028CB2F /* Products */,
 				132F25DA245B09B00028CB2F /* Frameworks */,
+				11A0B6A4017781367B85EE04 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +100,7 @@
 			children = (
 				13522BF425B5C85C00617023 /* BanubaEffectPlayer.xcframework */,
 				134AC782246043C00056CE94 /* OpenGLES.framework */,
+				ED18F543B4A45F23BD1140DA /* Pods_quickstart_ios_cpp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,10 +121,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 132F25D4245B03EB0028CB2F /* Build configuration list for PBXNativeTarget "quickstart-ios-cpp" */;
 			buildPhases = (
+				22F52FB2F5C419036ED9786E /* [CP] Check Pods Manifest.lock */,
 				132F25B7245B03E90028CB2F /* Sources */,
 				132F25B8245B03E90028CB2F /* Frameworks */,
 				132F25B9245B03E90028CB2F /* Resources */,
-				132F25DE245B09B00028CB2F /* Embed Frameworks */,
+				B1CC3A23A7EDB905E58A2DDC /* [CP] Embed Pods Frameworks */,
+				C91117E7BE70529E2A6B5C36 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,6 +181,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22F52FB2F5C419036ED9786E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-quickstart-ios-cpp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1CC3A23A7EDB905E58A2DDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-quickstart-ios-cpp/Pods-quickstart-ios-cpp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-quickstart-ios-cpp/Pods-quickstart-ios-cpp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-quickstart-ios-cpp/Pods-quickstart-ios-cpp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C91117E7BE70529E2A6B5C36 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-quickstart-ios-cpp/Pods-quickstart-ios-cpp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-quickstart-ios-cpp/Pods-quickstart-ios-cpp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-quickstart-ios-cpp/Pods-quickstart-ios-cpp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		132F25B7245B03E90028CB2F /* Sources */ = {
@@ -308,6 +368,7 @@
 		};
 		132F25D5245B03EB0028CB2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AC9D69613E186513F5CC614 /* Pods-quickstart-ios-cpp.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
@@ -316,9 +377,12 @@
 				EXCLUDED_ARCHS = armv7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
+					"\"${PODS_ROOT}/BNBSdkApi\"",
+					"\"${PODS_ROOT}/BNBSdkCore\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/BNBSdkApi\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/BNBSdkCore\"",
 				);
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks/BanubaEffectPlayer.xcframework/ios-arm64/BanubaEffectPlayer.framework/PrivateHeaders\"";
+				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/BNBSdkCore/BNBSdkCore.xcframework/ios-arm64/BNBSdkCore.framework/PrivateHeaders/\"";
 				INFOPLIST_FILE = "quickstart-ios-cpp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -333,6 +397,7 @@
 		};
 		132F25D6245B03EB0028CB2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9BE358E02D715F1B0FDEB67 /* Pods-quickstart-ios-cpp.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
@@ -341,9 +406,12 @@
 				EXCLUDED_ARCHS = armv7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
+					"\"${PODS_ROOT}/BNBSdkApi\"/**",
+					"\"${PODS_ROOT}/BNBSdkCore\"/**",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/BNBSdkApi\"/**",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/BNBSdkCore\"/**",
 				);
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks/BanubaEffectPlayer.xcframework/ios-arm64/BanubaEffectPlayer.framework/PrivateHeaders\"";
+				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/BNBSdkCore/BNBSdkCore.xcframework/ios-arm64/BNBSdkCore.framework/PrivateHeaders/\"";
 				INFOPLIST_FILE = "quickstart-ios-cpp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

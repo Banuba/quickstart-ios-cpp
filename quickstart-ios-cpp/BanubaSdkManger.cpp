@@ -30,7 +30,6 @@ extern "C" struct BanubaSdkManager
     }
 };
 
-
 extern "C" void BanubaSdkManager_initialize(
     const char** pathToResources,
     const char* clientToken)
@@ -56,10 +55,14 @@ extern "C" BanubaSdkManager* BanubaSdkManager_create()
 
 extern "C" void BanubaSdkManager_setMetalLayer(
     BanubaSdkManager* sdk,
-    void* layer)
+    RenderSurface* surface)
 {
-    sdk->effectPlayer->effect_manager()->set_render_surface(
-        reinterpret_cast<int64_t>(layer));
+    bnb::interfaces::surface_data data(
+        surface->gpuDevicePtr,
+        surface->commandQueuePtr,
+        surface->surfacePtr
+    );
+    sdk->effectPlayer->effect_manager()->set_render_surface(data);
 }
 
 extern "C" void BanubaSdkManager_loadEffect(

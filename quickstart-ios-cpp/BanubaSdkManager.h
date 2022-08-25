@@ -2,6 +2,13 @@
 
 typedef struct BanubaSdkManager BanubaSdkManager;
 
+typedef struct
+{
+    long long int gpuDevicePtr;
+    long long int commandQueuePtr;
+    long long int surfacePtr;
+} RenderSurface;
+
 void BanubaSdkManager_initialize(
     const char** pathToResources,
     const char* clientToken);
@@ -10,8 +17,7 @@ void BanubaSdkManager_deinitialize(void);
 
 BanubaSdkManager* BanubaSdkManager_create(void);
 
-/** Accepts CAMetalLayer */
-void BanubaSdkManager_setMetalLayer(BanubaSdkManager* sdk, void* layer);
+void BanubaSdkManager_setMetalLayer(BanubaSdkManager* sdk, RenderSurface* surface);
 
 void BanubaSdkManager_loadEffect(
     BanubaSdkManager* sdk,

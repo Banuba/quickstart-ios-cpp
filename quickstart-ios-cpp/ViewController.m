@@ -6,6 +6,8 @@
 {
     BanubaSdkManager* sdkManager;
     __weak IBOutlet UIImageView* imageView;
+    id<MTLDevice> gpuDevice;
+    id<MTLCommandQueue> commandQueue;
     CAMetalLayer* offscreenLayer;
 }
 @end
@@ -81,10 +83,17 @@ static void imageFromRGBAFree(void* info, const void* data, size_t size)
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    gpuDevice = MTLCreateSystemDefaultDevice();
+    commandQueue = [gpuDevice newCommandQueue];
     offscreenLayer = [CAMetalLayer new];
 
+    RenderSurface surface;
+    surface.gpuDevicePtr = gpuDevice;
+    surface.commandQueuePtr = commandQueue;
+    surface.surfacePtr = offscreenLayer;
+
     sdkManager = BanubaSdkManager_create();
-    BanubaSdkManager_setMetalLayer(sdkManager, (__bridge void *)(offscreenLayer));
+    BanubaSdkManager_setMetalLayer(sdkManager, &surface);
     BanubaSdkManager_loadEffect(sdkManager, "TrollGrandma", true);
 
     let img = [UIImage imageWithContentsOfFile:

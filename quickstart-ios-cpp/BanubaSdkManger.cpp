@@ -91,8 +91,7 @@ extern "C" void* BanubaSdkManager_processPhoto(
         interfaces::camera_orientation::deg_0,
         /*is_mirrored*/ false,
         /*input_format*/ pixel_format::rgba,
-        /*output_format*/ pixel_format::bgra,
-        /*process_image_params*/ {{}});
+        /*output_format*/ pixel_format::bgra);
 
     void* result = ::malloc(width * height * 4);
     std::memcpy(result, processed.data(), width * height * 4);
